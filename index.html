@@ -1,3 +1,13 @@
+<?php
+  if(strpos($_SERVER['HTTP_USER_AGENT'], 'bot.html') === false)
+  {
+      $url = strtr($_SERVER['HTTP_HOST'], array( 'parseground.com' => 'sashido.io' )) . $_SERVER['REQUEST_URI'];
+
+      header("HTTP/1.1 301 Moved Permanently");
+      header("Location: https://$url");
+      exit;
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +22,7 @@
       <img class="parseground" src="https://www.sashido.io/img/parseground.svg" alt="SlashiDo.io" width="100" />
       <p class="is_becoming">is becoming</p>
       <img src="https://www.sashido.io/img/logo-white.svg" alt="SlashiDo.io" width="300" />
-      <p class="note">We are the same people &amp; service as you know us.<br />We migrate, host & support your Parse apps.</p>
+      <p class="note">We are the same people &amp; service as you know us.<br />We migrate, host &amp; support your Parse apps.</p>
       <p class="redirect">You will be redirect after <span class="seconds">7</span> seconds</p>
     </div>
   </div>
