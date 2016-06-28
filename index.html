@@ -1,12 +1,12 @@
 <?php
-  // if(strpos($_SERVER['HTTP_USER_AGENT'], 'bot.html') === false)
-  // {
-  //     $url = strtr($_SERVER['HTTP_HOST'], array( 'parseground.com' => 'sashido.io' )) . $_SERVER['REQUEST_URI'];
+  //if(strpos($_SERVER['HTTP_USER_AGENT'], 'bot.html') === false)
+  //{
+       $url = strtr($_SERVER['HTTP_HOST'], array( 'parseground.com' => 'sashido.io' )) . $_SERVER['REQUEST_URI'];
 
-  //     header("HTTP/1.1 301 Moved Permanently");
-  //     header("Location: https://$url");
-  //     exit;
-  // }
+       header("HTTP/1.1 301 Moved Permanently");
+       header("Location: https://$url");
+       exit;
+   //}
 ?>
 <!DOCTYPE html>
 <html lang="en">
